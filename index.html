@@ -29,11 +29,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
 
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
     </style>
+
+<script>
+  $(document).ready(function(){
+    $("#bookmark").click(function(){
+      $("#bookmark_content").show();
+    });
+  });
+  </script>
+
   </head>
 
   <body class="font-Rubik">
@@ -103,6 +113,7 @@
             flex flex-1 flex-col
             justify-center
             items-center
+            ml-5 
             lg:items-start
           "
         >
@@ -111,7 +122,7 @@
               text-bookmark-blue
               font-medium
               text-3xl
-              md:text-4xl
+              md:text-4xl 
               lg:text-5xl
               text-center
               lg:text-left
@@ -163,12 +174,12 @@
     <!-- FEATURES -->
 
     <section>
-      <div class="container flex flex-col items-center mt-24">
-        <div class="flex flex-col items-center xl:w-5/12">
+      <div class="container flex flex-col items-center mt-24 lg:px-5">
+        <div class="flex flex-col items-center">
           <h2 class="font-medium text-center text-bookmark-blue text-4xl mb-6">
             Features
           </h2>
-          <p class="text-bookmark-grey text-lg text-center mb-10">
+          <p class="text-bookmark-grey sm:px-4 lg:w-2/3 xl:w-3/4 2xl:w-2/3 text-lg text-center mb-10">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
@@ -177,17 +188,14 @@
 
         <div
           class="
-            flex flex-col
+            flex flex-col md:flex-row
             justify-center
-            sm:flex-row
-            pb-6
-            mb-4
-            border-b border-solid border-bookmark-grey
           "
         >
-          <button
+          <button id="bookmark"
             class="
               w-60
+              py-4
               text-lg text-bookmark-blue text-center
               hover:text-bookmark-red
             "
@@ -197,6 +205,7 @@
           <button
             class="
               w-60
+              py-4
               text-lg text-bookmark-blue text-center
               hover:text-bookmark-red
             "
@@ -206,6 +215,7 @@
           <button
             class="
               w-60
+              py-4
               text-lg text-bookmark-blue text-center
               hover:text-bookmark-red
             "
@@ -216,12 +226,12 @@
       </div>
     </section>
 
-    <section id="bookmark" class="relative">
+    <section id="bookmark_content" class="relative ">
       <div
         class="
           container
-          flex flex-col-reverse
-          lg:flex-row
+          flex flex-col
+          lg:flex-row        
           justify-center
           items-center
           gap-4
@@ -230,7 +240,7 @@
         "
       >
         <!-- IMAGE -->
-        <div class="flex flex-1 justify-center items-center z-10">
+        <div class="flex flex-1 justify-center items-center z-10 mb-16 sm:mb-20">
           <img src="images/illustration-features-tab-1.svg" alt="" class="" />
         </div>
 
@@ -246,9 +256,10 @@
             top-14
             left-0
             sm:h-72 sm:top-28
-            md:h-80 md:top-32
-            lg:h-60 lg:top-28 lg:-left-1/3
-            xl:h-80 xl:top-40 xl:-left-1/3
+            md:h-80 md:top-20
+            lg:h-68 lg:top-14 lg:-left-1/3
+            xl:h-80 xl:top-28 xl:-left-1/3
+            2xl:w-2/3
           "
         ></div>
 
@@ -271,7 +282,7 @@
               text-center
               lg:text-left
               mb-6
-              px-20
+              lg:px-20
             "
           >
             Bookmark in one click
@@ -281,7 +292,7 @@
               text-bookmark-grey text-lg text-center
               lg:text-left
               mb-6
-              px-20
+              lg:px-20
             "
           >
             Organize your bookmarks however you like. Our simple drag-and-drop
@@ -295,11 +306,11 @@
       </div>
     </section>
 
-    <section id="search" class="relative hidden">
+    <section id="search_content" class="relative">
       <div
         class="
           container
-          flex flex-col-reverse
+          flex flex-col
           lg:flex-row
           justify-center
           items-center
@@ -309,7 +320,7 @@
         "
       >
         <!-- IMAGE -->
-        <div class="flex flex-1 justify-center items-center z-10">
+        <div class="flex flex-1 justify-center items-center z-10 mb-16">
           <img src="images/illustration-features-tab-2.svg" alt="" class="" />
         </div>
 
@@ -322,12 +333,13 @@
             absolute
             h-44
             w-3/4
-            top-14
+            top-28
             left-0
-            sm:h-72 sm:top-28
+            sm:h-72 sm:top-36
             md:h-80 md:top-32
-            lg:h-60 lg:top-28 lg:-left-1/3
-            xl:h-80 xl:top-40 xl:-left-1/3
+            lg:h-80 lg:top-28 lg:-left-1/3
+            xl:h-80 xl:top-36 xl:-left-1/3
+            2xl:w-2/3
           "
         ></div>
 
@@ -350,7 +362,7 @@
               text-center
               lg:text-left
               mb-6
-              px-20
+              lg:px-20
             "
           >
             Intelligent search
@@ -360,7 +372,7 @@
               text-bookmark-grey text-lg text-center
               lg:text-left
               mb-6
-              px-20
+              lg:px-20
             "
           >
             Our powerful search feature will help you find saved sites in no
@@ -373,11 +385,11 @@
       </div>
     </section>
 
-    <section id="sharing" class="relative hidden">
+    <section id="sharing_content" class="relative">
       <div
         class="
           container
-          flex flex-col-reverse
+          flex flex-col
           lg:flex-row
           justify-center
           items-center
@@ -387,7 +399,7 @@
         "
       >
         <!-- IMAGE -->
-        <div class="flex flex-1 justify-center items-center z-10">
+        <div class="flex flex-1 justify-center items-center z-10 mb-16">
           <img src="images/illustration-features-tab-3.svg" alt="" class="" />
         </div>
 
@@ -400,12 +412,13 @@
             absolute
             h-44
             w-3/4
-            top-14
+            top-28
             left-0
-            sm:h-72 sm:top-28
-            md:h-80 md:top-32
-            lg:h-60 lg:top-28 lg:-left-1/3
-            xl:h-80 xl:top-40 xl:-left-1/3
+            sm:h-72 sm:top-32
+            md:h-80 md:top-24
+            lg:h-80 lg:top-24 lg:-left-1/3
+            xl:h-80 xl:top-32 xl:-left-1/3
+            2xl:w-2/3
           "
         ></div>
 
@@ -428,7 +441,7 @@
               text-center
               lg:text-left
               mb-6
-              px-20
+              lg:px-20
             "
           >
             Share your bookmarks
@@ -438,7 +451,7 @@
               text-bookmark-grey text-lg text-center
               lg:text-left
               mb-6
-              px-20
+              lg:px-20
             "
           >
             Easily share your bookmarks and collections with others. Create a
