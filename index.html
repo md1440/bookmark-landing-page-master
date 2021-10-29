@@ -36,17 +36,10 @@
       @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
     </style>
 
-<script>
-  $(document).ready(function(){
-    $("#bookmark").click(function(){
-      $("#bookmark_content").show();
-    });
-  });
-  </script>
-
+    <script></script>
   </head>
 
-  <body class="font-Rubik">
+  <body class="font-Rubik bg-bookmark-white">
     <!-- HEADER -->
 
     <header>
@@ -113,7 +106,7 @@
             flex flex-1 flex-col
             justify-center
             items-center
-            ml-5 
+            ml-5
             lg:items-start
           "
         >
@@ -122,7 +115,7 @@
               text-bookmark-blue
               font-medium
               text-3xl
-              md:text-4xl 
+              md:text-4xl
               lg:text-5xl
               text-center
               lg:text-left
@@ -179,20 +172,26 @@
           <h2 class="font-medium text-center text-bookmark-blue text-4xl mb-6">
             Features
           </h2>
-          <p class="text-bookmark-grey sm:px-4 lg:w-2/3 xl:w-3/4 2xl:w-2/3 text-lg text-center mb-10">
+          <p
+            class="
+              text-bookmark-grey
+              sm:px-4
+              lg:w-2/3
+              xl:w-3/4
+              2xl:w-2/3
+              text-lg text-center
+              mb-10
+            "
+          >
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
             can access them on the go.
           </p>
         </div>
 
-        <div
-          class="
-            flex flex-col md:flex-row
-            justify-center
-          "
-        >
-          <button id="bookmark"
+        <div class="flex flex-col md:flex-row justify-center">
+          <button
+            id="bookmark"
             class="
               w-60
               py-4
@@ -226,12 +225,12 @@
       </div>
     </section>
 
-    <section id="bookmark_content" class="relative ">
+    <section id="bookmark_content" class="relative">
       <div
         class="
           container
           flex flex-col
-          lg:flex-row        
+          lg:flex-row
           justify-center
           items-center
           gap-4
@@ -240,7 +239,9 @@
         "
       >
         <!-- IMAGE -->
-        <div class="flex flex-1 justify-center items-center z-10 mb-16 sm:mb-20">
+        <div
+          class="flex flex-1 justify-center items-center z-10 mb-16 sm:mb-20"
+        >
           <img src="images/illustration-features-tab-1.svg" alt="" class="" />
         </div>
 
@@ -460,6 +461,88 @@
           <div class="flex justify-center flex-wrap px-20">
             <button type="button" class="btn btn-purple">More Info</button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOWNLOADS -->
+
+    <section>
+      <div class="container flex flex-col items-center mt-24 lg:px-5">
+        <div class="flex flex-col items-center">
+          <h2 class="font-medium text-center text-bookmark-blue text-4xl mb-6">
+            Download the extension
+          </h2>
+          <p
+            class="
+              text-bookmark-grey
+              sm:px-4
+              lg:w-2/3
+              xl:w-3/4
+              2xl:w-2/3
+              text-lg text-center
+              mb-10
+            "
+          >
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+        </div>
+
+				<div class="flex gap-8">
+
+					<div class="flex flex-col items-center bg-bookmark-white shadow-xl py-5 px-8 relative">
+
+						<div class="border-b-2 border-dotted border-bookmark-grey absolute top-36 w-full "></div>
+						<div>
+							<img class="" src="images/logo-chrome.svg" alt="">
+						</div>
+						<div class="">
+						<h3 class="text-bookmark-blue text-xl font-medium mt-6 mb-1">Add to Chrome</h3>
+						<p class="text-bookmark-grey ">Minimum version 62</p>
+						</div>
+						<button type="button" class="btn btn-purple mt-10">
+              Add & Install Extension
+            </button>
+					</div>
+
+					<div>
+						<button type="button" class="btn btn-purple">
+              Add & Install Extension
+            </button>
+					</div>
+					<div>
+						<button type="button" class="btn btn-purple">
+              Add & Install Extension
+            </button>
+					</div>
+				</div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+
+    <section>
+      <div class="container flex flex-col items-center mt-24 lg:px-5">
+        <div class="flex flex-col items-center">
+          <h2 class="font-medium text-center text-bookmark-blue text-4xl mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p
+            class="
+              text-bookmark-grey
+              sm:px-4
+              lg:w-2/3
+              xl:w-3/4
+              2xl:w-2/3
+              text-lg text-center
+              mb-10
+            "
+          >
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
         </div>
       </div>
     </section>
