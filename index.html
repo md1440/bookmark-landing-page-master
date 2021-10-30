@@ -30,8 +30,8 @@
 
       .accordion-title::after {
         display: block;
-        content: ' ';
-        background-image: url('../images/icon-arrow.svg');
+        content: " ";
+        background-image: url("../images/icon-arrow.svg");
         background-repeat: no-repeat;
         height: 12px;
         width: 18px;
@@ -41,8 +41,8 @@
 
       .accordion-active::after {
         display: block;
-        content: ' ';
-        background-image: url('images/icon-arrow.svg');
+        content: " ";
+        background-image: url("images/icon-arrow.svg");
         background-repeat: no-repeat;
         transform: rotate(180deg) translateX(15px);
         height: 15px;
@@ -56,13 +56,6 @@
         overflow: hidden;
         transition: 800ms ease max-height;
       }
-
-      .pb-5-delay {
-        padding-bottom: 0.75rem;
-        transition: 800ms ease;
-      }
-
-
     </style>
   </head>
 
@@ -241,44 +234,52 @@
 
     <section>
       <!-- FAQ Header -->
-      <div class="container flex flex-col items-center mt-24 lg:px-5">
+      <div class="container flex flex-col max-w-xl items-center mt-36 lg:px-5">
         <div class="flex flex-col items-center">
           <h2 class="mb-6 text-center text-bookmark-blue text-4xl font-medium">Frequently Asked Questions</h2>
-          <p class="mb-10 2xl:w-2/3 text-center text-bookmark-grey text-lg sm:px-4 lg:w-2/3 xl:w-3/4">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+          <p class="mb-10 text-center text-bookmark-grey text-lg">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
         </div>
       </div>
 
       <!-- FAQ Accordion https://youtu.be/nMbtxsNwu1A -->
 
       <div class="accordion container mx-auto max-w-xl text-bookmark-blue">
-
         <div class="accordion-item py-5 border-t-2">
-          <h3 class="accordion-title flex justify-center items-center hover:text-bookmark-red cursor-pointer text-lg">What is Bookmark?</h3>
-          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
-        </div>
-
-        <div class="accordion-item py-5 border-t-2">
-          <h3 class="accordion-title flex items-center hover:text-bookmark-red cursor-pointer text-lg">How can I request a new browser?</h3>
-          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+          <h3 class="accordion-title flex items-center justify-center hover:text-bookmark-red text-lg cursor-pointer">What is Bookmark?</h3>
+          <div class="accordion-answer">
+            <p class="pt-5 text-bookmark-blue text-opacity-90 leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+          </div>
         </div>
 
         <div class="accordion-item py-5 border-t-2">
-          <h3 class="accordion-title flex items-center hover:text-bookmark-red cursor-pointer text-lg">Is there a mobile app?</h3>
-          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-            sollicitudin ex et ultricies bibendum.</p>
+          <h3 class="accordion-title flex items-center hover:text-bookmark-red text-lg cursor-pointer">How can I request a new browser?</h3>
+          <div class="accordion-answer">
+            <p class="pt-5 text-bookmark-blue text-opacity-90 leading-8">
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris
+              augue massa, ultricies non ligula. Suspendisse imperdiet.
+            </p>
+          </div>
         </div>
 
-        <div class="accordion-item py-5 pb-5 border-t-2 border-b-2">
-          <h3 class="accordion-title flex items-center hover:text-bookmark-red cursor-pointer text-lg">What about other Chromium browsers?</h3>
-          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-            vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        <div class="accordion-item py-5 border-t-2">
+          <h3 class="accordion-title flex items-center hover:text-bookmark-red text-lg cursor-pointer">Is there a mobile app?</h3>
+          <div class="accordion-answer">
+            <p class="pt-5 text-bookmark-blue text-opacity-90 leading-8">
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+            </p>
+          </div>
         </div>
-        
 
+        <div class="accordion-item pb-5 py-5 border-b-2 border-t-2">
+          <h3 class="accordion-title flex items-center hover:text-bookmark-red text-lg cursor-pointer">What about other Chromium browsers?</h3>
+          <div class="accordion-answer">
+            <p class="pt-5 text-bookmark-blue text-opacity-90 leading-8">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="container flex ">
+      <button type="button" class="mx-auto btn btn-purple mt-12">More Info</button>
       </div>
     </section>
 
@@ -299,24 +300,20 @@
       const accordionTitles = document.querySelectorAll(".accordion-title");
 
       accordionTitles.forEach((accordionTitle) => {
-        accordionTitle.addEventListener('click', () => {
+        accordionTitle.addEventListener("click", () => {
           const height = accordionTitle.nextElementSibling.scrollHeight;
-          console.log(height)
-          accordionTitle.classList.toggle('accordion-active');
-          
-          if (accordionTitle.classList.contains('accordion-active')) {
-            accordionTitle.classList.add("pb-5-delay");
+          console.log(height);
+          accordionTitle.classList.toggle("accordion-active");
+
+          if (accordionTitle.classList.contains("accordion-active")) {
+            // accordionTitle.classList.add("pb-5-delay");
             accordionTitle.nextElementSibling.style.maxHeight = `${height}px`;
-          }
-          else {
+          } else {
             accordionTitle.nextElementSibling.style.maxHeight = "0px";
-            setTimeout(() => {  accordionTitle.classList.remove("pb-5-delay"); }, 600);
+            // setTimeout(() => {  accordionTitle.classList.remove("pb-5-delay"); }, 600);
           }
-        })
+        });
       });
-
     </script>
-
   </body>
 </html>
-
