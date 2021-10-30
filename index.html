@@ -27,6 +27,42 @@
       .janBlock {
         display: block;
       }
+
+      .accordion-title::after {
+        display: block;
+        content: ' ';
+        background-image: url('../images/icon-arrow.svg');
+        background-repeat: no-repeat;
+        height: 12px;
+        width: 18px;
+        margin-left: auto;
+        padding-right: 2rem;
+      }
+
+      .accordion-active::after {
+        display: block;
+        content: ' ';
+        background-image: url('images/icon-arrow.svg');
+        background-repeat: no-repeat;
+        transform: rotate(180deg) translateX(15px);
+        height: 15px;
+        width: 16px;
+        margin-left: auto;
+        padding-right: 2rem;
+      }
+
+      .accordion-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: 800ms ease max-height;
+      }
+
+      .pb-5-delay {
+        padding-bottom: 0.75rem;
+        transition: 800ms ease;
+      }
+
+
     </style>
   </head>
 
@@ -68,7 +104,7 @@
         </div>
 
         <!-- ROUNDED RECTANGLE -->
-        <div class="absolute hidden right-0 top-24 w-3/4 h-32 bg-bookmark-purple rounded-l-full sm:block sm:top-44 sm:h-72 md:top-44 md:h-80 lg:-right-1/3 lg:top-48 lg:h-60 xl:-right-1/3 xl:top-56 xl:h-72 2xl:-right-1/3 2xl:top-72 2xl:h-72"></div>
+        <div class="absolute 2xl:-right-1/3 right-0 top-24 2xl:top-72 hidden w-3/4 h-32 2xl:h-72 bg-bookmark-purple rounded-l-full sm:top-44 sm:block sm:h-72 md:top-44 md:h-80 lg:-right-1/3 lg:top-48 lg:h-60 xl:-right-1/3 xl:top-56 xl:h-72"></div>
       </div>
     </section>
 
@@ -162,7 +198,7 @@
         </div>
 
         <div class="flex gap-8">
-          <div class="relative flex flex-col items-center px-8 py-5 bg-bookmark-white shadow-xl mb-28">
+          <div class="relative flex flex-col items-center mb-28 px-8 py-5 bg-bookmark-white shadow-xl">
             <div class="absolute top-56 w-full border-b-4 border-dotted border-bookmark-grey border-opacity-20"></div>
             <div>
               <img class="" src="images/logo-chrome.svg" alt="" />
@@ -173,8 +209,8 @@
             </div>
             <button type="button" class="btn btn-purple mt-12">Add & Install Extension</button>
           </div>
-          
-          <div class="relative flex flex-col items-center px-8 py-5 bg-bookmark-white shadow-xl mt-14 mb-14">
+
+          <div class="relative flex flex-col items-center mb-14 mt-14 px-8 py-5 bg-bookmark-white shadow-xl">
             <div class="absolute top-56 w-full border-b-4 border-dotted border-bookmark-grey border-opacity-20"></div>
             <div>
               <img class="" src="images/logo-firefox.svg" alt="" />
@@ -186,7 +222,7 @@
             <button type="button" class="btn btn-purple mt-12">Add & Install Extension</button>
           </div>
 
-          <div class="relative flex flex-col items-center px-8 py-5 bg-bookmark-white shadow-xl mt-28">
+          <div class="relative flex flex-col items-center mt-28 px-8 py-5 bg-bookmark-white shadow-xl">
             <div class="absolute top-56 w-full border-b-4 border-dotted border-bookmark-grey border-opacity-20"></div>
             <div>
               <img class="" src="images/logo-opera.svg" alt="" />
@@ -197,9 +233,6 @@
             </div>
             <button type="button" class="btn btn-purple mt-12">Add & Install Extension</button>
           </div>
-
-    
-          
         </div>
       </div>
     </section>
@@ -207,13 +240,50 @@
     <!-- FAQ -->
 
     <section>
+      <!-- FAQ Header -->
       <div class="container flex flex-col items-center mt-24 lg:px-5">
         <div class="flex flex-col items-center">
           <h2 class="mb-6 text-center text-bookmark-blue text-4xl font-medium">Frequently Asked Questions</h2>
           <p class="mb-10 2xl:w-2/3 text-center text-bookmark-grey text-lg sm:px-4 lg:w-2/3 xl:w-3/4">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
         </div>
       </div>
+
+      <!-- FAQ Accordion https://youtu.be/nMbtxsNwu1A -->
+
+      <div class="accordion container mx-auto max-w-xl text-bookmark-blue">
+
+        <div class="accordion-item py-5 border-t-2">
+          <h3 class="accordion-title flex justify-center items-center hover:text-bookmark-red cursor-pointer text-lg">What is Bookmark?</h3>
+          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+        </div>
+
+        <div class="accordion-item py-5 border-t-2">
+          <h3 class="accordion-title flex items-center hover:text-bookmark-red cursor-pointer text-lg">How can I request a new browser?</h3>
+          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+        </div>
+
+        <div class="accordion-item py-5 border-t-2">
+          <h3 class="accordion-title flex items-center hover:text-bookmark-red cursor-pointer text-lg">Is there a mobile app?</h3>
+          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+            sollicitudin ex et ultricies bibendum.</p>
+        </div>
+
+        <div class="accordion-item py-5 pb-5 border-t-2 border-b-2">
+          <h3 class="accordion-title flex items-center hover:text-bookmark-red cursor-pointer text-lg">What about other Chromium browsers?</h3>
+          <p class="accordion-answer text-bookmark-blue text-opacity-90 leading-8">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            vitae neque eget nisl gravida pellentesque non ut velit.</p>
+        </div>
+        
+
+      </div>
     </section>
+
+    <!-- JAVASCRIPT -->
+
     <script>
       $(".feature[data-id=0]").addClass("janBlock");
       $(".btn-tab").on("click", function () {
@@ -224,22 +294,29 @@
         $(".feature[data-id =" + value + "]").addClass("janBlock");
       });
     </script>
+
+    <script>
+      const accordionTitles = document.querySelectorAll(".accordion-title");
+
+      accordionTitles.forEach((accordionTitle) => {
+        accordionTitle.addEventListener('click', () => {
+          const height = accordionTitle.nextElementSibling.scrollHeight;
+          console.log(height)
+          accordionTitle.classList.toggle('accordion-active');
+          
+          if (accordionTitle.classList.contains('accordion-active')) {
+            accordionTitle.classList.add("pb-5-delay");
+            accordionTitle.nextElementSibling.style.maxHeight = `${height}px`;
+          }
+          else {
+            accordionTitle.nextElementSibling.style.maxHeight = "0px";
+            setTimeout(() => {  accordionTitle.classList.remove("pb-5-delay"); }, 600);
+          }
+        })
+      });
+
+    </script>
+
   </body>
 </html>
 
-<!-- An shite
-
-JQUERY
-
-var texte[] = {
-  `` ``,
-  `` ``,
-  `` ``
-
-}
-
-$( ".jansButton" ).on( "click", function() {
-  var value =  $(this).attr('data-id');
-});
-
--->
