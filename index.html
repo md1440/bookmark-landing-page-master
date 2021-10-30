@@ -110,7 +110,7 @@
           <p class="mb-10 2xl:w-2/3 text-center text-bookmark-grey text-lg sm:px-4 lg:w-2/3 xl:w-3/4">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
         </div>
 
-        <div class="flex flex-col justify-center md:flex-row">
+        <div class="flex flex-col justify-center md:flex-row border-b-2">
           <button data-id="0" id="bookmark" class="btn-tab py-4 w-60 text-center text-bookmark-blue hover:text-bookmark-red text-lg">Simple Bookmarking</button>
           <button data-id="1" class="btn-tab py-4 w-60 text-center text-bookmark-blue hover:text-bookmark-red text-lg">Speedy Searching</button>
           <button data-id="2" class="btn-tab py-4 w-60 text-center text-bookmark-blue hover:text-bookmark-red text-lg">Easy Sharing</button>
@@ -291,8 +291,11 @@
         var value = $(this).attr("data-id");
 
         $(".feature").removeClass("janBlock");
+        // $(".btn-tab").removeClass("border-b-2 border-bookmark-red");
 
         $(".feature[data-id =" + value + "]").addClass("janBlock");
+        // $(".btn-tab").addClass("border-b-2 border-bookmark-red");
+
       });
     </script>
 
