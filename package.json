@@ -4,7 +4,7 @@
   "description": "![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "build": "tailwind build -i src/source.css -o css/styles.css"
+    "build": "tailwind build -i src/source.css -o css/styles.css -w"
   },
   "keywords": [],
   "author": "",

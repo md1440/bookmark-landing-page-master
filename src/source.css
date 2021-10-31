@@ -3,16 +3,59 @@
 @tailwind utilities;
 
 
+@layer base {
 
-.btn {
-    @apply shadow-md py-3 px-6 rounded-md transition duration-300; 
+
+      .accordion-title::after {
+        display: block;
+        content: " ";
+        background-image: url("../images/icon-arrow.svg");
+        background-repeat: no-repeat;
+        height: 12px;
+        width: 18px;
+        margin-left: auto;
+        padding-right: 2rem;
+      }
+
+      .accordion-active::after {
+        display: block;
+        content: " ";
+        background-image: url("../images/icon-arrow.svg");
+        background-repeat: no-repeat;
+        transform: rotate(180deg) translateX(15px);
+        height: 15px;
+        width: 16px;
+        margin-left: auto;
+        padding-right: 2rem;
+      }
+
+      .accordion-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: 800ms ease max-height;
+      }
+
+      /* .svg-hover svg path:hover {
+        fill: #FA5959;
+      } */
+
 }
 
-.btn-purple {
-    @apply bg-bookmark-purple text-white hover:bg-bookmark-white hover:text-bookmark-purple border-transparent border border-solid hover:border-current;
+@layer components {
+
+    .btn {
+        @apply shadow-md py-3 px-6 rounded-md transition duration-300; 
+    }
+
+    .btn-purple {
+        @apply bg-bookmark-purple text-white hover:bg-bookmark-white hover:text-bookmark-purple border-transparent border border-solid hover:border-current;
+    }
+
+    .btn-white {
+        @apply bg-bookmark-white text-bookmark-blue border-transparent border border-solid hover:border-current;
+    }
 }
 
-.btn-white {
-    @apply bg-bookmark-white text-bookmark-blue border-transparent border border-solid hover:border-current;
-}
-
+.jqBlock {
+    display: block;
+  }
