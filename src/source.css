@@ -35,10 +35,6 @@
         transition: 800ms ease max-height;
       }
 
-      /* .svg-hover svg path:hover {
-        fill: #FA5959;
-      } */
-
 }
 
 @layer components {
