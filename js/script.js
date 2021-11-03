@@ -21,13 +21,16 @@ const accordionTitles = document.querySelectorAll(".accordion-title");
 // FEATURES TAB
 
 $(".feature[data-id=0]").addClass("jqBlock");
+$(".btn-tab[data-id=0]").addClass("border-b-2 border-bookmark-red");
 $(".btn-tab").on("click", function () {
   var value = $(this).attr("data-id");
 
   $(".feature").removeClass("jqBlock");
+  $(".btn-tab").removeClass("border-b-2 border-bookmark-red");
   // $(".btn-tab").removeClass("border-b-2 border-bookmark-red");
 
   $(".feature[data-id =" + value + "]").addClass("jqBlock");
+  $(".btn-tab[data-id =" + value + "]").addClass("border-b-2 border-bookmark-red");
   // $(".btn-tab").addClass("border-b-2 border-bookmark-red");
 
   });
